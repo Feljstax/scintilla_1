@@ -12,7 +12,7 @@ $(function() {
         }
     });
     $("#reserveButton").click(function(){
-        $("#reserveModal").modal("show");
+        $("#reserveDemoModal").modal("show");
     })
     $("#loginButton").click(function(){
         $("#loginModal").modal("show");
