@@ -23,4 +23,8 @@ $(function() {
     $("#createAccountModelAnchor").click(function(){
         $("#createAccountModal").modal("hide");
     })
+    $(".reserveDemoButton").click(function() {
+        $("#reserveDemoModal").modal("show");
+    })
+    
 });

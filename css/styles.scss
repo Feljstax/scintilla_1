@@ -1,14 +1,19 @@
-$color-primary: #3046c5;
-$color-secondary: #5637DD;
+$color-primary: #432a7e;
+$color-secondary: #b7c00f;
 $color-pale: #CEC8FF;
-$color-mid:  #901cad;
-$color-dark: #60106B;
+$color-mid:  #ad1c78;
+$color-dark: #120314;
 $color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal-transparent: rgba(26, 149, 149, 0.584);
 $color-teal:#17A2b8;
-$color-body: #FDC4C4;
+$color-body: #dce1e2;
+$color-copper: #B87333;
+$color-yellow: #FACA00;
+$color_blue: #35A2C9;
+$color-gray: rgb(148, 146, 146);
 
-$body-font: "Nunito-Sans";
-$header-font: "Merriweather";
+$body-font: "Poppins";
+$header-font: "Poppins";
 
 
 body {
@@ -16,29 +21,46 @@ body {
     background-color: $color-body;
 }
 
-h1, h2, h3 {
+h1  {
     font-family: $header-font;
+    font-weight:bolder;
 }
+
 
 h2 {
-    color: $color-primary;
+    font-family: $header-font;
+    font-weight: bold;
+    color: $color-blue;
+    font-size: large;
 }
 
+h3 {
+    font-family: $header-font;
+    font-weight: 500;
+}
+
+
 header {
+    h1, h2 {
+        color: $color-dark;
+    }
     h2 {
-        color: $color-pale;
+        font-style: italic;
+        font-size: medium;
     }
 }
 
+
+
 .site-footer {
-    background-image: linear-gradient($color-pale,white);
+    background-image: linear-gradient($color-teal-transparent,white);
     padding: 20px 0;
 }
 
 .jumbotron {
     margin: 0;
     padding: 30px;
-    background-image: linear-gradient(to right, $color-secondary, $color-primary, $color-dark );
+    background-image: linear-gradient(to right, $color-teal-transparent, $color-teal, $color-pale);
     color: white;
 }
 
@@ -49,7 +71,14 @@ header {
 }
 
 .navbar {
-    background-color: $color-mid;
+    background-color: $color-gray;
+    
+}
+
+#reserveButton {
+    background-color: $color-teal;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 .tab-content {
@@ -58,7 +87,7 @@ header {
 }
 
 .carousel-caption { 
-    background-color: $color-black-transparent;
+    background-color: $color-teal-transparent;
 }
 
 .carousel {
@@ -72,16 +101,29 @@ header {
     z-index: 100;
 }
 
-#reserveModal {
-    .modal-header {
-        background-color: $color-teal;
-        color: white;
+#reserveDemoModal {
+    .modal-content {
+        background-color: $color-yellow;
+        border-radius: 2em;
     }
 }
 
 #loginModal {
-    .modal-header {
-        background-color: $color-mid;
-        color:white;
+    .modal-content {
+        background-color: $color-yellow;
+        border-radius: 2em;
     }
+}
+
+
+#createAccountModal {
+    .modal-content {
+        background-color: $color-blue;
+        border-radius: 2em;
+    }
+}
+
+#createAccountModelAnchor {
+    color: $color-mid;
+    font-weight: 700;
 }

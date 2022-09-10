@@ -1,177 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-        <!-- build:css css/main.css -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />    
-        <link rel="stylesheet" href="css/styles.css" />
-        <!-- endbuild -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather|Nunito+Sans" />
-    
-        <title>Scintilla: Aligining dance studio staff towards a common purpose</title>
-    </head>
-    <body>
-        <header class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4 col-sm-3 col-md-2 align self-center">
-                        <img src="img/logo.png" class="img-fluid"/>
-                    </div>
-                    <div class="col">
-                        <h1>Scintilla</h1>
-                        <h2>Aligning dance studio staff towards a common purpose</h2>
-                    </div>
-                </div>       
-            </div>
-        </header>
-    
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30"/></a>
-                <button class="navbar-toggler" type="'button" data-toggle="collapse" data-target="#nucampNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nucampNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-info fa-lg"></i> Features</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact us </a></li> -->
-                        <li class="nav-item"><a class="nav-link" role="button" id="createAccountButton"><i class="fa fa-address-card fa-lg"></i> Create account</a></li>
-                        <li class="nav-item"><a class="nav-link" role="button" id="loginButton"><i class="fa fa-sign-in fa-lg"></i>Login</a> </li>
-                    </ul>
-                    <div class="ml-auto">
-                        <a class="text-nowrap">
-                            <button class="btn btn-info btn-sm" type="button" id="reserveButton" href="#reserveDemoModal">Schedule a demo</button>
-                        </a>
-                    </div>
+ <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />    
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Nunito+Sans" />
+
+    <title>Scintilla: Aligining dance studio staff towards a common purpose</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Scintilla</h1>
+                    <h2>Aligning dance studio staff towards a common purpose</h2>
+                </div>
+            </div>       
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <button class="navbar-toggler" type="'button" data-toggle="collapse" data-target="#nucampNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/index.html"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-laptop fa-lg"></i> Features</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i> Contact us </a></li> -->
+                    <li class="nav-item"><a class="nav-link" role="button" id="createAccountButton"><i class="fa fa-user-plus fa-lg"></i> Create account</a></li>
+                    <li class="nav-item"><a class="nav-link" role="button" id="loginButton"><i class="fa fa-sign-in fa-lg"></i>Login</a> </li>
+                </ul>
+                <div class="ml-auto">
+                    <a class="text-nowrap">
+                        <button class="btn btn-info btn-sm" type="button" id="reserveButton" >Schedule a demo</button>
+                    </a>
                 </div>
             </div>
-        </nav>
-    
-        <div id="reserveDemoModal" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h3 class="modal-title w-100">Schedule a demo</h3>
-                        <button class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <p class="text-center">Our experts are happy to answer your questions, or setup a 14-day trial</p>
-                        <div class="container-fluid">
-                            <form id="reserveDemoForm">
-                                <div class="form-group row">
-                                    
+        </div>
+    </nav>
+
+    <div id="reserveDemoModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title w-100">Schedule a demo</h3>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Our experts are happy to answer your questions, or setup a 14-day trial</p>
+                    <div class="container-fluid">
+                        <form id="reserveDemoForm">
+                            <div class="form-group row">
+                                
+                            </div>
+                            <div class="form-group row justify-content-center">
+                                <div class="col col-sm-3">
+                                    <label class="col-form-label" for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="email@email.com" />
                                 </div>
-                                <div class="form-group row justify-content-center">
-                                    <div class="col col-sm-3">
-                                        <label class="col-form-label" for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="email@email.com" />
-                                    </div>
+                            </div>
+                            <div class="form-group row text-center">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Search</button>
                                 </div>
-                                <div class="form-group row text-center">
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary btn-sm ml-1">Search</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <div id="loginModal" class="modal fade" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h3 class="modal-title w-100">Login</h3>
-                        <button class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form>
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-6">
-                                        <label class="sr-only" for="loginEmail">Email address</label>
-                                        <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
-                                    </div>  
-                                </div>
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-6">
-                                        <label class="sr-only" for="loginPassword">Password</label>
-                                        <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password" >
-                                    </div>            
-                                </div>
-                                <div class="form-row">
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" >
-                                            <label class="form-check-label">Remember me</label>
-                                        </div>
+    </div>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title w-100">Login</h3>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row justify-content-center">
+                                <div class="form-group col-6">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>  
+                            </div>
+                            <div class="form-row justify-content-center">
+                                <div class="form-group col-6">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password" >
+                                </div>            
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" >
+                                        <label class="form-check-label">Remember me</label>
                                     </div>
                                 </div>
-                                <div class="form-group row text-center">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                                    </div>              
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group row text-center">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                                </div>              
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-    
-        <div id="createAccountModal" class="modal fade" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h3 class="modal-title w-100">Create account</h3>
-                        <button class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <p>Already registered? Login <a href="#" id="createAccountModelAnchor" data-toggle="modal" data-target="#loginModal">here</a></p>
-                            <form>
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-6">
-                                        <label class="sr-only" for="loginEmail">Email address</label>
-                                        <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
-                                    </div>  
-                                </div>
-                                <div class="form-row justify-content-center">
-                                    <div class="form-group col-6">
-                                        <label class="sr-only" for="loginPassword">Password</label>
-                                        <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password" >
-                                    </div>            
-                                </div>
-                                <div class="form-row">
-                                    <div class="col">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" >
-                                            <label class="form-check-label">Remember me</label>
-                                        </div>
+    </div>
+
+    <div id="createAccountModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h3 class="modal-title w-100">Create account</h3>
+                    <button class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <p>Already registered? Login <a href="#" id="createAccountModelAnchor" data-toggle="modal" data-target="#loginModal">here</a></p>
+                        <form>
+                            <div class="form-row justify-content-center">
+                                <div class="form-group col-6">
+                                    <label class="sr-only" for="loginEmail">Email address</label>
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                </div>  
+                            </div>
+                            <div class="form-row justify-content-center">
+                                <div class="form-group col-6">
+                                    <label class="sr-only" for="loginPassword">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password" >
+                                </div>            
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" >
+                                        <label class="form-check-label">Remember me</label>
                                     </div>
                                 </div>
-                                <div class="form-group row text-center">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                        <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                                    </div>              
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group row text-center">
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                                </div>              
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -179,8 +175,8 @@
                 <h3>What we do</h3>
                 <p>We provide dance studio owners with tools that unite their employee towards a commmon goal, and move the studio towards a path to success.</p>
             </div>
-            <div class="col-sm-6">
-                <img class="w-50 " src="/img/dance-studio-staff-1.png" alt="Dance studio staff" />
+            <div class="col-sm-6 d-flex justify-content-center">
+                <img class="w-50" src="/img/dance-studio-staff-1.png" alt="Dance studio staff" />
             </div>
         </div>
 
@@ -204,7 +200,7 @@
                                             <h4>Improve employee productivity</h4>
                                             <p class="d-none d-sm-block">Give employees and manging staff opportunities to gauge individual growth, indicate areas of improvement, and encourage personal action. </p>
                                             <div class="ml-auto text-left">
-                                                <button type="submit" class="btn btn-primary">Schedule a demo</button> 
+                                                <button type="submit" class="btn btn-secondary reserveDemoButton">Schedule a demo</button> 
                                             </div>
                                         </div>
                                     </div>
@@ -228,7 +224,7 @@
                                             <h4>Drive growth and enhance performance</h4>
                                             <p class="d-none d-sm-block">Put your finger at the pulse of what's really moving the needle forward for your studio and its staff.</p>
                                             <div class="ml-auto text-left">
-                                                <button type="submit" class="btn btn-primary">Schedule demo</button> 
+                                                <button type="submit" class="btn btn-secondary reserveDemoButton">Schedule demo</button> 
                                             </div>
                                         </div>
                                     </div>
@@ -252,7 +248,7 @@
                                             <h4>Foster office camaraderie and improve commpany culture.</h4>
                                             <p class="d-none d-sm-block">Motivate employees to improve performance, and build empathy with one another.</p>
                                             <div class="ml-auto text-left">
-                                                <button type="submit" class="btn btn-primary">Schedule demo</button> 
+                                                <button type="submit" class="btn btn-secondary reserveDemoButton">Schedule demo</button> 
                                             </div>
                                         </div>
                                     </div>
@@ -276,7 +272,7 @@
                                             <h4>Create alignment and surpass milestones</h4>
                                             <p class="d-none d-sm-block">Put current and new employees in separate paths to their overall success based off of their time spent with the studio.</p>
                                             <div class="ml-auto text-left">
-                                                <button type="submit" class="btn btn-primary">Schedule demo</button> 
+                                                <button type="submit" class="btn btn-secondary reserveDemoButton">Schedule demo</button> 
                                             </div>
                                         </div>
                                     </div>
@@ -295,8 +291,8 @@
                 <div class="col-4 col-sm-2 offset-1">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="#">Features</a></li>
                         <!-- <li><a href="contactus.html">Contact</a></li> -->
                         <li><a href="#" data-toggle="modal" data-target="#createAccountModal">Create account</a></li>
                         <li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
