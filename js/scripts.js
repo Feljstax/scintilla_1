@@ -17,4 +17,10 @@ $(function() {
     $("#loginButton").click(function(){
         $("#loginModal").modal("show");
     })
+    $("#createAccountButton").click(function(){
+        $("#createAccountModal").modal("show");
+    })
+    $("#createAccountModelAnchor").click(function(){
+        $("#createAccountModal").modal("hide");
+    })
 });
